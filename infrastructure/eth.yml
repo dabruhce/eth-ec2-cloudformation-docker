@@ -64,4 +64,4 @@ Resources:
             #sudo usermod -a -G docker ec2-user
             sudo service docker start
             #curl https://sh.rustup.rs -sSf | sh
-            sudo docker run ethcore/parity:v1.6.6
+            sudo docker run -ti -d -p 8545:8545 --name my-parity ethcore/parity:v1.6.6 --jsonrpc-interface '0.0.0.0' --jsonrpc-hosts="all"
